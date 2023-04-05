@@ -29,5 +29,5 @@ class Book(models.Model):
 class Publisher(models.Model):
     name = models.CharField(max_length=15)
     
-class Prueba(model.Model):
+class Prueba(models.Model):
     name = models.CharField(max_length=15)
