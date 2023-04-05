@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  pruebaarnauweb:
+    image: pruebaarnauweb
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: sh -c 'python3 manage.py migrate && gunicorn --bind 0.0.0.0:8000 prueba.wsgi'
+    # ports:
+    #  - 8000:8000
+    expose:
+      - 8000
+    depends_on:
+      - pgdb
+      - nginx
+    volumes:
+      - static_files:/usr/src/app/static
+
+  nginx:
+    build:
+      context: ./nginx/
+    ports:
+      - 8080:8080
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - static_files:/home/app/static/
+
+    
+  pgdb:
+    image: postgres
+    container_name: pgdb
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+volumes:
+   static_files:
