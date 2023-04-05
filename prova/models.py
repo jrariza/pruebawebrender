@@ -31,3 +31,7 @@ class Publisher(models.Model):
     
 class Prueba(models.Model):
     name = models.CharField(max_length=15)
+    
+class Caca(models.Model):
+    name = models.CharField(max_length=15)
+
