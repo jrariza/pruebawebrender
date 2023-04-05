@@ -80,16 +80,16 @@ WSGI_APPLICATION = 'prueba.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': int(os.environ.get('DB_PORT'))
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('DB_NAME'),
+#         'USER': os.environ.get('DB_USER'),
+#         'PASSWORD': os.environ.get('DB_PASSWORD'),
+#         'HOST': os.environ.get('DB_HOST'),
+#         'PORT': int(os.environ.get('DB_PORT'))
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
@@ -102,16 +102,16 @@ DATABASES = {
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'booksdb_mzdv',
-#         'USER': 'booksdb_mzdv_user',
-#         'PASSWORD': 'JH6x4ksyTTe1mdvY985f8ZEa5zNdMoKO',
-#         'HOST': 'dpg-cgmlq33hp8ua8vqukclg-a.oregon-postgres.render.com',
-#         'PORT': 5432,
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'booksdb_mzdv',
+        'USER': 'booksdb_mzdv_user',
+        'PASSWORD': 'JH6x4ksyTTe1mdvY985f8ZEa5zNdMoKO',
+        'HOST': 'dpg-cgmlq33hp8ua8vqukclg-a.oregon-postgres.render.com',
+        'PORT': 5432,
+    }
+}
 
 
 # Password validation
