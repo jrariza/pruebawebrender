@@ -12,7 +12,6 @@ ENV PYTHONUNBUFFERED=1
 # Install pip requirements
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
-RUN python manage.py migrate
 
 WORKDIR /app
 COPY . /app
