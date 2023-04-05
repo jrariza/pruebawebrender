@@ -16,6 +16,8 @@ services:
       - nginx
     volumes:
       - static_files:/usr/src/app/static
+    env_file:
+      - .env.dev
 
   nginx:
     build:
